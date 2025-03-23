@@ -2,6 +2,17 @@
 
 Un système de blog moderne construit avec Next.js , TypeScript, et Prisma.
 
+## Captures d'écran
+
+### Page d'accueil
+![Page d'accueil](docs/assets/home-screenshot.png)
+
+### Grille d'article
+![Carte d'article](docs/assets/article-card-screenshot.png)
+
+### Détail d'un article
+![Détail d'un article](docs/assets/detail-post-screenshot.png)
+
 ## Fonctionnalités
 
 - Authentification avec NextAuth.js
