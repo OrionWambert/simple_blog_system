@@ -13,7 +13,7 @@
     "test:coverage": "vitest run --coverage",
     "db:generate": "npx prisma generate",
     "db:push": "npx prisma db push",
-    "postinstall": "npm run db:push && npm run db:generate && npm run seed"
+    "postinstall": "npm run db:generate"
   },
   "dependencies": {
     "@auth/core": "^0.34.2",
