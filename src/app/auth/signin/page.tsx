@@ -5,6 +5,7 @@ import {SignInButtonGroup} from "@/components/molecules/sign-in-button-group";
 import {PrivacyPolicyCard} from "@/components/molecules/privacy-policy-card";
 import {LoginLayout} from "@/components/templates/login-layout";
 import {LoginContent} from "@/components/content/login-content";
+import {Suspense} from "react";
 
 export default function SignIn() {
     return (
@@ -14,7 +15,9 @@ export default function SignIn() {
                     <AppLogo/>
                 </Center>
                 <LoginCardDescription/>
-                <SignInButtonGroup/>
+                <Suspense>
+                    <SignInButtonGroup/>
+                </Suspense>
                 <PrivacyPolicyCard/>
             </LoginLayout>
         </LoginContent>
