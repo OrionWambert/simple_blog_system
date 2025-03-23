@@ -14,6 +14,15 @@ export default async function AdminPage() {
     redirect('/api/auth/signin?callbackUrl=/admin')
   }
 
+  const user = await prisma.user.findUnique({
+    where: { id: session.user.id },
+    select: { role: true }
+  })
+
+  if (user?.role !== 'ADMIN') {
+    redirect('/') 
+  }
+
   const posts = await prisma.post.findMany({
     orderBy: {
       createdAt: 'desc'

@@ -13,6 +13,15 @@ export async function PATCH(
         return new NextResponse('Unauthorized', {status: 401})
     }
 
+    const user = await prisma.user.findUnique({
+        where: { id: session.user.id },
+        select: { role: true }
+    })
+
+    if (user?.role !== 'ADMIN') {
+        return new NextResponse('Forbidden', {status: 403})
+    }
+
     try {
         const body = await request.json()
         const {published} = body
@@ -41,6 +50,16 @@ export async function DELETE(
 
     if (!session?.user) {
         return new NextResponse('Unauthorized', {status: 401})
+    }
+
+    // Vérifier si l'utilisateur est un admin
+    const user = await prisma.user.findUnique({
+        where: { id: session.user.id },
+        select: { role: true }
+    })
+
+    if (user?.role !== 'ADMIN') {
+        return new NextResponse('Forbidden', {status: 403})
     }
 
     const {slug} = await params;
