@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Simple Blog System
 
-## Getting Started
+Un système de blog moderne construit avec Next.js , TypeScript, et Prisma.
 
-First, run the development server:
+## Fonctionnalités
+
+- Authentification avec NextAuth.js
+- Interface utilisateur moderne avec Tailwind CSS
+- Base de données sqlite avec Prisma
+- Tests avec Vitest
+
+## Prérequis
+
+- Node.js 18+
+- npm ou pnpm
+
+## Installation
+
+1. Cloner le projet
+2. Installer les dépendances :
+```bash
+npm install
+# ou
+pnpm install
+```
+
+3. Configurer les variables d'environnement :
+   Copier `.env.local.example` vers `.env.local` et remplir les variables requises
+
+4. Initialiser la base de données :
+```bash
+npm run db:push
+npm run seed
+```
+
+## Développement
+
+Lancer le serveur de développement :
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
+# ou
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts disponibles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Lance le serveur de développement
+- `npm run build` - Construit l'application pour la production
+- `npm run start` - Lance l'application en production
+- `npm run test` - Lance les tests
+- `npm run seed` - Remplit la base de données avec des données de test
+- `npm run db:push` - Met à jour le schéma de la base de données
+- `npm run db:client` - Génère le client Prisma
 
-## Learn More
+## Technologies principales
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js](https://nextjs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [Prisma](https://www.prisma.io)
+- [NextAuth.js](https://next-auth.js.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Vitest](https://vitest.dev)
