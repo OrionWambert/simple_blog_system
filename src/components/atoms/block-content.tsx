@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { BlockRenderer } from "@/components/blocks/default-blog"
+import { BlockRenderer } from "@/components/blocks/default-block"
 import { Block } from '@/types/block'
 
 interface BlockContentProps {
