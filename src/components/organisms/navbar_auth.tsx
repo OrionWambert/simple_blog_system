@@ -31,12 +31,6 @@ export function NavbarAuth() {
                     className="w-8 h-8 rounded-full"
                 />
             )}
-            <Link
-                href="/admin"
-                className="text-sm text-gray-600 hover:text-gray-900"
-            >
-                Admin
-            </Link>
             <button
                 onClick={() => signOut()}
                 className="text-sm text-gray-600 hover:text-gray-900"
