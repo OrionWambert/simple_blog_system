@@ -2,7 +2,6 @@
 
 import {SocialLoginButton} from "@/components/atoms/social-login-button";
 import {FaGithub} from "react-icons/fa";
-import {FcGoogle} from "react-icons/fc";
 import {useSearchParams} from "next/navigation";
 import {signIn} from "next-auth/react";
 
